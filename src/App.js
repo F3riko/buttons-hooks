@@ -1,6 +1,7 @@
 import React from "react";
 import LineComponent from "./components/line";
 import AlertComponent from "./components/alert";
+import "./App.css"
 
 const App = () => {
   const [clicked, setClicked] = React.useState("nothing");
