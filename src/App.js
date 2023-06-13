@@ -1,6 +1,4 @@
-import React, { Component } from "react";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
+import React from "react";
 import LineComponent from "./components/line";
 import AlertComponent from "./components/alert";
 
@@ -11,50 +9,22 @@ const App = () => {
     setClicked(digit);
   };
 
+  const lineProps = {
+    onClickFunction: handleClick,
+    digit1: "1",
+    digit2: "2",
+    className1: "danger",
+    className2: "success",
+  };
+
   return (
     <div className="col-4 offset-1 center">
-      <LineComponent
-        onClickFunction={handleClick}
-        digit1="1"
-        digit2="2"
-        className1="danger"
-        className2="success"
-      />
-      <LineComponent
-        onClickFunction={handleClick}
-        digit1="2"
-        digit2="4"
-        className1="danger"
-        className2="success"
-      />
-      <LineComponent
-        onClickFunction={handleClick}
-        digit1="3"
-        digit2="6"
-        className1="danger"
-        className2="success"
-      />
-      <LineComponent
-        onClickFunction={handleClick}
-        digit1="4"
-        digit2="8"
-        className1="danger"
-        className2="success"
-      />
-      <LineComponent
-        onClickFunction={handleClick}
-        digit1="5"
-        digit2="10"
-        className1="danger"
-        className2="success"
-      />
-      <LineComponent
-        onClickFunction={handleClick}
-        digit1="6"
-        digit2="12"
-        className1="danger"
-        className2="success"
-      />
+      <LineComponent {...lineProps} />
+      <LineComponent {...lineProps} digit1="2" digit2="4" />
+      <LineComponent {...lineProps} digit1="3" digit2="6" />
+      <LineComponent {...lineProps} digit1="4" digit2="8" />
+      <LineComponent {...lineProps} digit1="5" digit2="10" />
+      <LineComponent {...lineProps} digit1="6" digit2="12" />
       <AlertComponent digit={clicked} />
     </div>
   );
