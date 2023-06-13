@@ -18,7 +18,10 @@ class ButtonComponent extends Component {
           clicked: true,
           className: `btn btn-outline-${className}`,
         })
-      : this.setState({ clicked: false, className: `btn btn-${className}` });
+      : this.setState({
+          clicked: false,
+          className: `btn btn-${className}`,
+        });
   };
 
   render() {
@@ -31,6 +34,5 @@ class ButtonComponent extends Component {
     );
   }
 }
-
 
 export default ButtonComponent;

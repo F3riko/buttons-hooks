@@ -15,7 +15,7 @@ class LineComponent extends Component {
       <div className="container">
         <div className="row">
           <div className="col">
-            <div className="btn-group" role="group" aria-label="Button group">
+            <div className="d-flex justify-content-between btn-group">
               <ButtonComponent
                 digit={digit1}
                 onClickFunction={onClickFunction}

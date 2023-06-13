@@ -10,7 +10,7 @@ class AlertComponent extends Component {
   render() {
     const { digit } = this.props;
     return (
-      <div className="alert alert-info" role="alert">
+      <div className="alert alert-info text-center" role="alert">
         You've clicked {digit}
       </div>
     );
