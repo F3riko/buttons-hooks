@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-export default class ButtonComponent extends Component {
+class ButtonComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,3 +31,6 @@ export default class ButtonComponent extends Component {
     );
   }
 }
+
+
+export default ButtonComponent;
