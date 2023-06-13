@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import LineComponent from "./components/line";
+import AlertComponent from "./components/alert";
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      clicked: ""
+      clicked: "nothing"
     }
   }
   handleClick = (digit) => {
@@ -59,8 +60,8 @@ class App extends Component {
         className1="danger"
         className2="success"
       />
+      <AlertComponent digit={this.state.clicked}/>
       </>
-      
     );
   }
 }
